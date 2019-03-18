@@ -3,6 +3,7 @@ package note.controller;
 import java.util.HashMap;
 import java.util.List;
 
+import note.main.ClasaException;
 import note.model.Corigent;
 import note.model.Elev;
 import note.model.Medie;
@@ -13,7 +14,6 @@ import note.repository.EleviRepository;
 import note.repository.EleviRepositoryMock;
 import note.repository.NoteRepository;
 import note.repository.NoteRepositoryMock;
-import note.utils.ClasaException;
 
 public class NoteController {
 	private NoteRepository note;

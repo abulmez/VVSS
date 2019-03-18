@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import note.main.ClasaException;
 import note.model.Elev;
 import note.model.Medie;
 import note.model.Nota;
@@ -13,7 +14,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import note.utils.ClasaException;
 import note.utils.Constants;
 
 import note.controller.NoteController;
@@ -31,7 +31,7 @@ private NoteController ctrl;
 	public ExpectedException expectedEx = ExpectedException.none();
 	
 	@Test
-	public void test1() throws ClasaException{
+	public void test1() throws ClasaException {
 		Elev e1 = new Elev(1, "Elev1");
 		Elev e2 = new Elev(2, "Elev2");
 		ctrl.addElev(e1);

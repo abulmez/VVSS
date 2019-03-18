@@ -2,6 +2,7 @@ package note.test;
 
 import static org.junit.Assert.*;
 
+import note.main.ClasaException;
 import note.model.Nota;
 
 import org.junit.Before;
@@ -9,7 +10,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import note.utils.ClasaException;
+
 import note.utils.Constants;
 
 import note.controller.NoteController;
@@ -37,7 +38,7 @@ public class AddNotaTest {
 	public void test2() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidNrmatricol);
-		Nota nota = new Nota(10.1, "Istorie", 5);
+		Nota nota = new Nota(10, "Istorie", 5);
 		ctrl.addNota(nota);
 	}
 	

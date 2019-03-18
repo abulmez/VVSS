@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import note.main.ClasaException;
 import note.model.Corigent;
 import note.model.Elev;
 import note.model.Medie;
@@ -14,7 +15,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import note.utils.ClasaException;
 import note.utils.Constants;
 
 import note.controller.NoteController;

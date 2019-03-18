@@ -4,14 +4,13 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import note.main.ClasaException;
 import note.model.Corigent;
 import note.model.Elev;
 import note.model.Nota;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import note.utils.ClasaException;
 
 import note.controller.NoteController;
 
