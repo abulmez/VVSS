@@ -29,5 +29,13 @@ public class Elev {
 	public String toString() {
 		return this.nrmatricol + " " + this.nume;
 	}
-	
+
+	@Override
+	public boolean equals(Object other){
+		if(other instanceof Elev){
+			Elev elev = (Elev)other;
+			return elev.getNrmatricol() == nrmatricol && elev.getNume().equals(nume);
+		}
+		return false;
+	}
 }

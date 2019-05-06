@@ -3,6 +3,16 @@ package note.model;
 public class Medie {
 	private Elev elev;
 	private double medie;
+
+	public Medie() {
+
+	}
+
+	public Medie(Elev elev, double medie) {
+		this.elev = elev;
+		this.medie = medie;
+	}
+
 	/**
 	 * @return the elev
 	 */
@@ -31,6 +41,13 @@ public class Medie {
 	public String toString() {
 		return this.elev.getNume() + " -> " + this.medie;
 	}
-	
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Medie){
+			Medie other = (Medie) obj;
+			return other.elev.equals(elev) && other.medie == medie;
+		}
+		return false;
+	}
 }

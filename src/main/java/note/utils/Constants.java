@@ -9,4 +9,5 @@ public class Constants {
 	public static String invalidMateria = "Lungimea materiei este invalida";
 	public static String invalidNrmatricol = "Numarul matricol introdus nu este corect";
 	public static String emptyRepository = "Nu exista date";
+	public static String invalidElev = "Elevul cautat nu a fost gasit";
 }
