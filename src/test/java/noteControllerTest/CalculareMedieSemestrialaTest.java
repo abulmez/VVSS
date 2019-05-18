@@ -86,8 +86,8 @@ public class CalculareMedieSemestrialaTest {
         Nota nota1 = new Nota(1, "mate", 8);
         Nota nota2 = new Nota(1, "info", 6);
         Medie result = controller.calculareMedieSemestriala("", 1,
-                new ArrayList<Nota>(Arrays.asList(nota1, nota2)),
-                new ArrayList<Elev>(Arrays.asList(elev1, elev2)));
+                Arrays.asList(nota1, nota2),
+                Arrays.asList(elev1, elev2));
         Medie expectedResult = new Medie(elev2, 7.0);
         assertEquals(expectedResult, result);
     }

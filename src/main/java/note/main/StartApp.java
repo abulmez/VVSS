@@ -27,14 +27,13 @@ public class StartApp {
      * @throws ClasaException
      */
     public static void main(String[] args) {
-//        // TODO Auto-generated method stub
-//        UI ui = new UI(args[0],args[1]);
-//        try {
-//            ui.showUI();
-//        } catch (ClasaException e) {
-//            e.printStackTrace();
-//        }
-        System.out.println(1/0);
+        // TODO Auto-generated method stub
+        UI ui = new UI(args[0],args[1]);
+        try {
+            ui.showUI();
+        } catch (ClasaException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -1,7 +1,7 @@
-12134;La
-21312;UBB
-1231232;Se
-12321;Fac
-5124;Multe
-12415;Materii
-23567;Inutile
+12134;Ana
+21312;Ion
+1231232;Claudiu
+12321;Anca
+5124;Denis
+12415;Dan
+23567;Rares

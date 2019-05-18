@@ -9,7 +9,9 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.List;
 
+import note.main.ClasaException;
 import note.model.Elev;
+import note.utils.Constants;
 
 public class EleviRepositoryMock implements EleviRepository{
 
@@ -32,7 +34,7 @@ public class EleviRepositoryMock implements EleviRepository{
 	}
 	
 	@Override
-	public void readElevi(String fisier) {
+	public void readElevi(String fisier) throws ClasaException {
 		try {
 			FileInputStream fstream = new FileInputStream(fisier);
 			DataInputStream in = new DataInputStream(fstream);
@@ -47,6 +49,7 @@ public class EleviRepositoryMock implements EleviRepository{
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			throw new ClasaException(Constants.eleviFileNotFound);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

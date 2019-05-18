@@ -97,9 +97,9 @@ public class ClasaRepositoryMock implements ClasaRepository{
 	}
 
 	@Override
-	public List<Corigent> getCorigenti() {
+	public List<Corigent> getCorigenti(HashMap<Elev, HashMap<String, List<Double>>> clasa) throws ClasaException {
 		List<Corigent> corigenti = new ArrayList<Corigent>();
-		if(clasa.size() >= 0) {
+		if(clasa.size() > 0) {
 			for(Elev elev : clasa.keySet()) {
 				Corigent corigent = new Corigent(elev.getNume(), 0);
 				for(String materie : clasa.get(elev).keySet()) {
@@ -114,13 +114,13 @@ public class ClasaRepositoryMock implements ClasaRepository{
 							i++;
 						}
 						double media = suma/i;
-						if (media >= 4.5)
+						if (media < 4.5)
 							corigent.setNrMaterii(corigent.getNrMaterii() + 1);
 					}
 				}
 				if(corigent.getNrMaterii() > 0) {
 					int i = 0;
-					while(i < corigenti.size() && corigenti.get(i).getNrMaterii() < corigent.getNrMaterii())
+					while(i < corigenti.size() && corigenti.get(i).getNrMaterii() > corigent.getNrMaterii())
 						i++;
 					if(i != corigenti.size() && corigenti.get(i).getNrMaterii() == corigent.getNrMaterii()) {
 						while(i < corigenti.size() && corigenti.get(i).getNrMaterii() == corigent.getNrMaterii() && corigenti.get(i).getNumeElev().compareTo(corigent.getNumeElev()) < 0)
@@ -132,6 +132,8 @@ public class ClasaRepositoryMock implements ClasaRepository{
 				}
 			}
 		}
+		else
+			throw new ClasaException(Constants.emptyRepository);
 		return corigenti;
 	}
 	

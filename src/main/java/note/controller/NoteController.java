@@ -28,6 +28,12 @@ public class NoteController {
         elevi = new EleviRepositoryMock();
     }
 
+    public NoteController(NoteRepository note,ClasaRepository clasa,EleviRepository elevi) {
+        this.note = note;
+        this.clasa = clasa;
+        this.elevi = elevi;
+    }
+
     public void addNota(Nota nota) throws ClasaException {
         note.addNota(nota);
     }
@@ -61,7 +67,7 @@ public class NoteController {
         clasa.afiseazaClasa();
     }
 
-    public void readElevi(String fisier) {
+    public void readElevi(String fisier) throws ClasaException{
         elevi.readElevi(fisier);
     }
 
@@ -69,8 +75,8 @@ public class NoteController {
         note.readNote(fisier);
     }
 
-    public List<Corigent> getCorigenti() {
-        return clasa.getCorigenti();
+    public List<Corigent> getCorigenti() throws ClasaException{
+        return clasa.getCorigenti(clasa.getClasa());
     }
 
     public Medie calculareMedieSemestriala(String nume, int numarMatricol,List<Nota> note,List<Elev> elevi) throws ClasaException {

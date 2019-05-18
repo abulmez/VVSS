@@ -35,6 +35,15 @@ public class Corigent {
 		this.nrMaterii = nrMaterii;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Corigent){
+			Corigent other = (Corigent) obj;
+			return other.numeElev.equals(numeElev) && other.nrMaterii == nrMaterii;
+		}
+		return false;
+	}
+
 	public String toString() {
 		return numeElev + " -> " + nrMaterii;
 	}

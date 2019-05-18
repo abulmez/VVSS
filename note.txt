@@ -1,2 +1,7 @@
 12134;VVSS;5.67
 5124;Calcul Numeric;6.88
+5124;Analiza;7
+5124;Analiza;1
+12134;Analiza;1
+12134;Calcul Numeric;2
+1231232;Calcul Numeric;4
